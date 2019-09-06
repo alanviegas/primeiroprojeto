@@ -1,0 +1,79 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mteste:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- [usersDao: Caso de teste 1 *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  org.apache.spark.SparkException: Job aborted due to stage failure: Task 7 in stage 13.0 failed 1 times, most recent failure: Lost task 7.0 in stage 13.0 (TID 219, localhost, executor driver): java.lang.RuntimeException: Error while encoding: java.lang.RuntimeException: java.lang.String is not a valid external type for schema of bigint[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mstaticinvoke(class org.apache.spark.unsafe.types.UTF8String, StringType, fromString, validateexternaltype(getexternalrowfield(assertnotnull(input[0, org.apache.spark.sql.Row, true]), 0, UserId), StringType), true, false) AS UserId#215[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mstaticinvoke(class org.apache.spark.unsafe.types.UTF8String, StringType, fromString, validateexternaltype(getexternalrowfield(assertnotnull(input[0, org.apache.spark.sql.Row, true]), 1, Age), StringType), true, false) AS Age#216[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mstaticinvoke(class org.apache.spark.unsafe.types.UTF8String, StringType, fromString, validateexternaltype(getexternalrowfield(assertnotnull(input[0, org.apache.spark.sql.Row, true]), 2, Occupation), StringType), true, false) AS Occupation#217[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mstaticinvoke(class org.apache.spark.unsafe.types.UTF8String, StringType, fromString, validateexternaltype(getexternalrowfield(assertnotnull(input[0, org.apache.spark.sql.Row, true]), 3, Zip_Code), StringType), true, false) AS Zip_Code#218[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mstaticinvoke(class org.apache.spark.unsafe.types.UTF8String, StringType, fromString, validateexternaltype(getexternalrowfield(assertnotnull(input[0, org.apache.spark.sql.Row, true]), 4, Genre_Id), StringType), true, false) AS Genre_Id#219[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mvalidateexternaltype(getexternalrowfield(assertnotnull(input[0, org.apache.spark.sql.Row, true]), 5, Item_Id), LongType) AS Item_Id#220L[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mvalidateexternaltype(getexternalrowfield(assertnotnull(input[0, org.apache.spark.sql.Row, true]), 6, Timestamp), LongType) AS Timestamp#221L[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mstaticinvoke(class org.apache.spark.unsafe.types.UTF8String, StringType, fromString, validateexternaltype(getexternalrowfield(assertnotnull(input[0, org.apache.spark.sql.Row, true]), 7, Rating), StringType), true, false) AS Rating#222[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m	at org.apache.spark.sql.catalyst.encoders.ExpressionEncoder.toRow(ExpressionEncoder.scala:293)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m	at org.apache.spark.sql.SparkSession.$anonfun$createDataFrame$2(SparkSession.scala:593)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m	at scala.collection.Iterator$$anon$10.next(Iterator.scala:448)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m	at scala.collection.Iterator$$anon$10.next(Iterator.scala:448)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m	at org.apache.spark.sql.execution.SparkPlan.$anonfun$getByteArrayRdd$1(SparkPlan.scala:256)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m	at org.apache.spark.rdd.RDD.$anonfun$mapPartitionsInternal$2(RDD.scala:836)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m	at org.apache.spark.rdd.RDD.$anonfun$mapPartitionsInternal$2$adapted(RDD.scala:836)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:324)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m	at org.apache.spark.rdd.RDD.iterator(RDD.scala:288)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m	at org.apache.spark.scheduler.Task.run(Task.scala:121)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:411)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m	at java.lang.Thread.run(Thread.java:748)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mCaused by: java.lang.RuntimeException: java.lang.String is not a valid external type for schema of bigint[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$SpecificUnsafeProjection.writeFields_0_0$(Unknown Source)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$SpecificUnsafeProjection.apply(Unknown Source)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m	at org.apache.spark.sql.catalyst.encoders.ExpressionEncoder.toRow(ExpressionEncoder.scala:289)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m	... 17 more[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mDriver stacktrace:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.apache.spark.scheduler.DAGScheduler.failJobAndIndependentStages(DAGScheduler.scala:1889)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:1877)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2$adapted(DAGScheduler.scala:1876)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:48)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:1876)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1(DAGScheduler.scala:926)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1$adapted(DAGScheduler.scala:926)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.Option.foreach(Option.scala:257)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:926)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:2110)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Cause: java.lang.RuntimeException: Error while encoding: java.lang.RuntimeException: java.lang.String is not a valid external type for schema of bigint[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mstaticinvoke(class org.apache.spark.unsafe.types.UTF8String, StringType, fromString, validateexternaltype(getexternalrowfield(assertnotnull(input[0, org.apache.spark.sql.Row, true]), 0, UserId), StringType), true, false) AS UserId#215[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mstaticinvoke(class org.apache.spark.unsafe.types.UTF8String, StringType, fromString, validateexternaltype(getexternalrowfield(assertnotnull(input[0, org.apache.spark.sql.Row, true]), 1, Age), StringType), true, false) AS Age#216[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mstaticinvoke(class org.apache.spark.unsafe.types.UTF8String, StringType, fromString, validateexternaltype(getexternalrowfield(assertnotnull(input[0, org.apache.spark.sql.Row, true]), 2, Occupation), StringType), true, false) AS Occupation#217[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mstaticinvoke(class org.apache.spark.unsafe.types.UTF8String, StringType, fromString, validateexternaltype(getexternalrowfield(assertnotnull(input[0, org.apache.spark.sql.Row, true]), 3, Zip_Code), StringType), true, false) AS Zip_Code#218[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mstaticinvoke(class org.apache.spark.unsafe.types.UTF8String, StringType, fromString, validateexternaltype(getexternalrowfield(assertnotnull(input[0, org.apache.spark.sql.Row, true]), 4, Genre_Id), StringType), true, false) AS Genre_Id#219[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mvalidateexternaltype(getexternalrowfield(assertnotnull(input[0, org.apache.spark.sql.Row, true]), 5, Item_Id), LongType) AS Item_Id#220L[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mvalidateexternaltype(getexternalrowfield(assertnotnull(input[0, org.apache.spark.sql.Row, true]), 6, Timestamp), LongType) AS Timestamp#221L[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mstaticinvoke(class org.apache.spark.unsafe.types.UTF8String, StringType, fromString, validateexternaltype(getexternalrowfield(assertnotnull(input[0, org.apache.spark.sql.Row, true]), 7, Rating), StringType), true, false) AS Rating#222[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.apache.spark.sql.catalyst.encoders.ExpressionEncoder.toRow(ExpressionEncoder.scala:293)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.apache.spark.sql.SparkSession.$anonfun$createDataFrame$2(SparkSession.scala:593)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.Iterator$$anon$10.next(Iterator.scala:448)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.Iterator$$anon$10.next(Iterator.scala:448)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.apache.spark.sql.execution.SparkPlan.$anonfun$getByteArrayRdd$1(SparkPlan.scala:256)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.apache.spark.rdd.RDD.$anonfun$mapPartitionsInternal$2(RDD.scala:836)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.apache.spark.rdd.RDD.$anonfun$mapPartitionsInternal$2$adapted(RDD.scala:836)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:324)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.apache.spark.rdd.RDD.iterator(RDD.scala:288)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Cause: java.lang.RuntimeException: java.lang.String is not a valid external type for schema of bigint[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.apache.spark.sql.catalyst.expressions.GeneratedClass$SpecificUnsafeProjection.writeFields_0_0$(Unknown Source)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.apache.spark.sql.catalyst.expressions.GeneratedClass$SpecificUnsafeProjection.apply(Unknown Source)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.apache.spark.sql.catalyst.encoders.ExpressionEncoder.toRow(ExpressionEncoder.scala:289)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.apache.spark.sql.SparkSession.$anonfun$createDataFrame$2(SparkSession.scala:593)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.Iterator$$anon$10.next(Iterator.scala:448)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.Iterator$$anon$10.next(Iterator.scala:448)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.apache.spark.sql.execution.SparkPlan.$anonfun$getByteArrayRdd$1(SparkPlan.scala:256)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.apache.spark.rdd.RDD.$anonfun$mapPartitionsInternal$2(RDD.scala:836)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.apache.spark.rdd.RDD.$anonfun$mapPartitionsInternal$2$adapted(RDD.scala:836)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m

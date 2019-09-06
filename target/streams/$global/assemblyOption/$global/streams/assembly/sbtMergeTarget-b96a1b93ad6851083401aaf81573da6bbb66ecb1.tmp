@@ -1,0 +1,14 @@
+{
+  "spark": {
+  "numrepartitions": 200,
+  },
+
+  "log": {
+    "level": "INFO"
+  },
+
+  "Path": {
+    "SourceDir": "/home/cloudera/source/",
+    "Users": "/home/cloudera/PrimeiroProjeto/Users.parquet"
+   }
+}
